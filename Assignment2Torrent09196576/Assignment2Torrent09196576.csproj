@@ -371,6 +371,14 @@
     <Compile Include="Migrations\202007172119259_AddTrolleyTable.Designer.cs">
       <DependentUpon>202007172119259_AddTrolleyTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007172136308_AddProductTrolley.cs" />
+    <Compile Include="Migrations\202007172136308_AddProductTrolley.Designer.cs">
+      <DependentUpon>202007172136308_AddProductTrolley.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007172220573_AddDBSETToIdentityModel.cs" />
+    <Compile Include="Migrations\202007172220573_AddDBSETToIdentityModel.Designer.cs">
+      <DependentUpon>202007172220573_AddDBSETToIdentityModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Product.cs" />
@@ -423,6 +431,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007172119259_AddTrolleyTable.resx">
       <DependentUpon>202007172119259_AddTrolleyTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007172136308_AddProductTrolley.resx">
+      <DependentUpon>202007172136308_AddProductTrolley.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007172220573_AddDBSETToIdentityModel.resx">
+      <DependentUpon>202007172220573_AddDBSETToIdentityModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

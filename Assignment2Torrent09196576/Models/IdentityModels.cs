@@ -30,26 +30,32 @@ namespace Assignment2Torrent09196576.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Trolley> Trolleys { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
 
-        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.Entity<ContractMedia>()
-        //        .HasKey(c => new { c.MediaId, c.ContractId });
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<IdentityUserLogin>().HasKey<string>(l => l.UserId);
+            modelBuilder.Entity<IdentityRole>().HasKey<string>(r => r.Id);
+            modelBuilder.Entity<IdentityUserRole>().HasKey(r => new { r.RoleId, r.UserId });
 
-        //    modelBuilder.Entity<Contract>()
-        //        .HasMany(c => c.ContractMedias)
-        //        .WithRequired()
-        //        .HasForeignKey(c => c.ContractId);
+            modelBuilder.Entity<ProductTrolley>()
+                .HasKey(c => new { c.ProductId, c.TrolleyId });
 
-        //    modelBuilder.Entity<Media>()
-        //        .HasMany(c => c.ContractMedias)
-        //        .WithRequired()
-        //        .HasForeignKey(c => c.MediaId);
-        //}
+            modelBuilder.Entity<Product>()
+                .HasMany(c => c.ProductTrolleys)
+                .WithRequired()
+                .HasForeignKey(c => c.ProductId);
+
+            modelBuilder.Entity<Trolley>()
+                .HasMany(c => c.ProductTrolleys)
+                .WithRequired()
+                .HasForeignKey(c => c.TrolleyId);
+        }
 
         public static ApplicationDbContext Create()
         {
