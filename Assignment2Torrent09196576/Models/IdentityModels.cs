@@ -30,7 +30,7 @@ namespace Assignment2Torrent09196576.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public DbSet<Product> Rentals { get; set; }
+        public DbSet<Product> Products { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
