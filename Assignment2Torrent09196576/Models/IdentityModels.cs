@@ -7,6 +7,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Assignment2Torrent09196576.Models;
+using System.Data.Entity;
 
 namespace Assignment2Torrent09196576.Models
 {
@@ -29,6 +30,7 @@ namespace Assignment2Torrent09196576.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Product> Rentals { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
