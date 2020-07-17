@@ -7,6 +7,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Assignment2Torrent09196576.Models;
+using System.Data.Entity;
 
 namespace Assignment2Torrent09196576.Models
 {
@@ -34,10 +35,27 @@ namespace Assignment2Torrent09196576.Models
         {
         }
 
+        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<ContractMedia>()
+        //        .HasKey(c => new { c.MediaId, c.ContractId });
+
+        //    modelBuilder.Entity<Contract>()
+        //        .HasMany(c => c.ContractMedias)
+        //        .WithRequired()
+        //        .HasForeignKey(c => c.ContractId);
+
+        //    modelBuilder.Entity<Media>()
+        //        .HasMany(c => c.ContractMedias)
+        //        .WithRequired()
+        //        .HasForeignKey(c => c.MediaId);
+        //}
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
+       
     }
 }
 
