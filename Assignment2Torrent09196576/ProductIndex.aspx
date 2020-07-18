@@ -10,7 +10,13 @@
           </a>
      </AnonymousTemplate>
      <LoggedInTemplate>
-         Thanks for logging in
+         <div class="container">
+             <div class="row">
+                 <a href="/TrolleyShow.aspx" class="btn btn-primary">Checkout</a>
+             </div>
+         </div>
+
+
          <div class="container">
              <div class="row">
                     <h1 class="text-center">Promotion</h1>

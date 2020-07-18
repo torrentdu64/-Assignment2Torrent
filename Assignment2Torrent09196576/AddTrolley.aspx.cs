@@ -33,7 +33,7 @@ namespace Assignment2Torrent09196576
             var currentUser = _context.Users.Single(u => u.Id == userId);
 
 
-            var troll = new Trolley { Name = "Future Person" };
+            var troll = new Trolley { User = currentUser };
             troll.ProductTrolleys = new List<ProductTrolley>
             {
               new ProductTrolley {
@@ -43,7 +43,7 @@ namespace Assignment2Torrent09196576
 
             //Now add this Trolley, with all its relationships, to the database
             _context.Trolleys.Add(troll);
-           // _context.SaveChanges();
+            _context.SaveChanges();
 
             Response.Redirect("ProductIndex.aspx");
         }

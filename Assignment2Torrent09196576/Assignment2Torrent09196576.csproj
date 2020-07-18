@@ -398,6 +398,10 @@
     <Compile Include="Migrations\202007180323483_AddCategoryToProduct.Designer.cs">
       <DependentUpon>202007180323483_AddCategoryToProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007182231337_AddUserToTrolley.cs" />
+    <Compile Include="Migrations\202007182231337_AddUserToTrolley.Designer.cs">
+      <DependentUpon>202007182231337_AddUserToTrolley.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Product.cs" />
@@ -474,6 +478,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007180323483_AddCategoryToProduct.resx">
       <DependentUpon>202007180323483_AddCategoryToProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007182231337_AddUserToTrolley.resx">
+      <DependentUpon>202007182231337_AddUserToTrolley.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
