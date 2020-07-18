@@ -23,12 +23,18 @@ h4 {
     box-shadow: 15px 28px 44px -26px rgba(0,0,0,0.51);
 }
 
+.grid-product{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
 .wrap-product {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     background: white;
     width: 224px;
-    padding:15px;
+    padding: 15px;
     webkit-box-shadow: 15px 28px 44px -26px rgba(0,0,0,0.51);
     -moz-box-shadow: 15px 28px 44px -26px rgba(0,0,0,0.51);
     box-shadow: 15px 28px 44px -26px rgba(0,0,0,0.51);
@@ -37,3 +43,14 @@ h4 {
     .wrap-product img {
         align-self: center;
     }
+
+    .wrap-product .product-des {
+        display: flex;
+        flex-direction: column;
+    }
+
+.grid-show{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    margin: 30px;
+}

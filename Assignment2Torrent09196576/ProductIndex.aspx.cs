@@ -14,7 +14,11 @@ namespace Assignment2Torrent09196576
     {
 
         protected List<Product> dbProducts;
-        public List<string> test;
+        protected List<Product> query;
+        protected List<Product> meats;
+        protected List<Product> drinks;
+        protected List<Product> fruits;
+        protected List<Product> discounts;
 
         private ApplicationDbContext _context;
 
@@ -29,15 +33,85 @@ namespace Assignment2Torrent09196576
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            dbProducts = _context.Products.ToList();
+
+
+            //var query = _context.Products
+            //     .GroupBy(p => p.Category)
+            //     .Select(g => new { product = g.ToList() , count = g.Count()}).ToList();
+
+            var query = _context.Products.ToList();
+            meats = new List<Product>();
+            foreach (var item in query)
+            {
+                if (item.Category == "Meat")
+                {
+                    Product p = new Product();
+                    p.Id = item.Id;
+                    p.Name = item.Name;
+                    p.Description = item.Description;
+                    p.Price = item.Price;
+                    meats.Add(p);
+                }
+            }
+            drinks = new List<Product>();
+            foreach (var item in query)
+            {
+                if (item.Category == "Drinks")
+                {
+                    Product p = new Product();
+                    p.Id = item.Id;
+                    p.Name = item.Name;
+                    p.Description = item.Description;
+                    p.Price = item.Price;
+                    drinks.Add(p);
+                }
+            }
+            fruits = new List<Product>();
+            foreach (var item in query)
+            {
+                if (item.Category == "Fruit")
+                {
+                    Product p = new Product();
+                    p.Id = item.Id;
+                    p.Name = item.Name;
+                    p.Description = item.Description;
+                    p.Price = item.Price;
+                    fruits.Add(p);
+                }
+            }
+            discounts = new List<Product>();
+            foreach (var item in query)
+            {
+                if (item.Discount != null)
+                {
+                    Product p = new Product();
+                    p.Id = item.Id;
+                    p.Name = item.Name;
+                    p.Description = item.Description;
+                    p.Price = item.Price;
+                    p.Discount = item.Discount;
+                    discounts.Add(p);
+                }
+            }
+               
+
+
+
+            //dbProducts = _context.Products.ToList();
+
             
+
+
+              
+
+
             //dbProduct = new List<String>();
             //foreach (var item in dbProducts)
             //{
             //    dbProduct.Add(item.Name);
             //}
 
-          
+
 
         }
 
