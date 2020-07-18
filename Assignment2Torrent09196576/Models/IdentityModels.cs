@@ -31,6 +31,9 @@ namespace Assignment2Torrent09196576.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Product> Products { get; set; }
+        public DbSet<Trolley> Trolleys { get; set; }
+
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
@@ -39,6 +42,22 @@ namespace Assignment2Torrent09196576.Models
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
+        }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<ProductTrolley>()
+                .HasKey(c => new { c.ProductId, c.TrolleyId });
+
+            modelBuilder.Entity<Product>()
+                .HasMany(c => c.ProductTrolleys)
+                .WithRequired()
+                .HasForeignKey(c => c.ProductId);
+
+            modelBuilder.Entity<Trolley>()
+                .HasMany(c => c.ProductTrolleys)
+                .WithRequired()
+                .HasForeignKey(c => c.TrolleyId);
         }
     }
 }

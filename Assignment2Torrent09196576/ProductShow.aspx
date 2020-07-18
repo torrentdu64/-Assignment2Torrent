@@ -7,6 +7,7 @@
      <h3>     <%= product.Description %> </h3>
      <h2>$    <%= product.Price %> </h2>
     
-   
-    
+    <a href="/TrolleyShow?id=<%= product.Id %>" >
+    <div class="btn btn-success">Add Trolley</div>
+    </a>
 </asp:Content>

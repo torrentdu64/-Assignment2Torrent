@@ -222,6 +222,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="TrolleyShow.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -373,9 +374,19 @@
     <Compile Include="Migrations\202007172235021_AddAttributeForProduct.Designer.cs">
       <DependentUpon>202007172235021_AddAttributeForProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007180056492_AddTrolleyTable.cs" />
+    <Compile Include="Migrations\202007180056492_AddTrolleyTable.Designer.cs">
+      <DependentUpon>202007180056492_AddTrolleyTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007180122392_AddProductTrolleyTable.cs" />
+    <Compile Include="Migrations\202007180122392_AddProductTrolleyTable.Designer.cs">
+      <DependentUpon>202007180122392_AddProductTrolleyTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductTrolley.cs" />
+    <Compile Include="Models\Trolley.cs" />
     <Compile Include="ProductIndex.aspx.cs">
       <DependentUpon>ProductIndex.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -400,6 +411,13 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="TrolleyShow.aspx.cs">
+      <DependentUpon>TrolleyShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrolleyShow.aspx.designer.cs">
+      <DependentUpon>TrolleyShow.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -431,6 +449,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007172235021_AddAttributeForProduct.resx">
       <DependentUpon>202007172235021_AddAttributeForProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007180056492_AddTrolleyTable.resx">
+      <DependentUpon>202007180056492_AddTrolleyTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007180122392_AddProductTrolleyTable.resx">
+      <DependentUpon>202007180122392_AddProductTrolleyTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
