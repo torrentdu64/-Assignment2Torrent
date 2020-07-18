@@ -5,7 +5,7 @@
     <h1>Products</h1>
   
     <% foreach (var item in dbProducts) { %>
-    <h1><%= item.Name %></h1>
+        <a href="/ProductShow?id=<%= item.Id %>">     <h1><%=  item.Name %></h1> </a>
      <%   } %>
 
 </asp:Content>
