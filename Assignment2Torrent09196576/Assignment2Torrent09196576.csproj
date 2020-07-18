@@ -171,6 +171,7 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="AddTrolley.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -180,6 +181,7 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="food.jpg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -193,6 +195,7 @@
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="ProductIndex.aspx" />
     <Content Include="ProductShow.aspx" />
+    <Content Include="Promo.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -222,6 +225,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="Styles.css" />
     <Content Include="TrolleyShow.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -334,6 +338,13 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AddTrolley.aspx.cs">
+      <DependentUpon>AddTrolley.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddTrolley.aspx.designer.cs">
+      <DependentUpon>AddTrolley.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -345,6 +356,7 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="AuthorizeAttribute.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -381,6 +393,10 @@
     <Compile Include="Migrations\202007180122392_AddProductTrolleyTable.cs" />
     <Compile Include="Migrations\202007180122392_AddProductTrolleyTable.Designer.cs">
       <DependentUpon>202007180122392_AddProductTrolleyTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007180323483_AddCategoryToProduct.cs" />
+    <Compile Include="Migrations\202007180323483_AddCategoryToProduct.Designer.cs">
+      <DependentUpon>202007180323483_AddCategoryToProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -455,6 +471,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007180122392_AddProductTrolleyTable.resx">
       <DependentUpon>202007180122392_AddProductTrolleyTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007180323483_AddCategoryToProduct.resx">
+      <DependentUpon>202007180323483_AddCategoryToProduct.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,0 +1,39 @@
+﻿body {
+    background: #f1f2f3;    
+}
+h4 {
+    color: black;
+}
+
+.grid-promo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+
+}
+
+.wrap-promo {
+   
+    background: #00000026;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    -webkit-box-shadow: 15px 28px 44px -26px rgba(0,0,0,0.51);
+    -moz-box-shadow: 15px 28px 44px -26px rgba(0,0,0,0.51);
+    box-shadow: 15px 28px 44px -26px rgba(0,0,0,0.51);
+}
+
+.wrap-product {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    width: 224px;
+    padding:15px;
+    webkit-box-shadow: 15px 28px 44px -26px rgba(0,0,0,0.51);
+    -moz-box-shadow: 15px 28px 44px -26px rgba(0,0,0,0.51);
+    box-shadow: 15px 28px 44px -26px rgba(0,0,0,0.51);
+}
+
+    .wrap-product img {
+        align-self: center;
+    }

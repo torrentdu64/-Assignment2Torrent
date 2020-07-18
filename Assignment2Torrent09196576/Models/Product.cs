@@ -12,6 +12,7 @@ namespace Assignment2Torrent09196576.Models
         public string Description { get; set; }
         public string  Price { get; set; }
         public string Discount { get; set; }
+        public string Category { get; set; }
 
         public virtual ICollection<ProductTrolley> ProductTrolleys { get; set; }
 

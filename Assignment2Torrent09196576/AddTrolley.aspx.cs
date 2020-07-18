@@ -8,11 +8,11 @@ using System.Web.UI.WebControls;
 
 namespace Assignment2Torrent09196576
 {
-    public partial class TrolleyShow : System.Web.UI.Page
+    public partial class AddTrolley : System.Web.UI.Page
     {
         private ApplicationDbContext _context;
 
-        public TrolleyShow()
+        public AddTrolley()
         {
             _context = new ApplicationDbContext();
         }
@@ -24,12 +24,12 @@ namespace Assignment2Torrent09196576
         {
             var productId = int.Parse(Request.Params["id"]);
             var dbproduct = _context.Products.Single(m => m.Id == productId);
-           
+
             var troll = new Trolley { Name = "Future Person" };
             troll.ProductTrolleys = new List<ProductTrolley>
             {
               new ProductTrolley {
-                Product = dbproduct    
+                Product = dbproduct
               }
             };
 
@@ -37,6 +37,7 @@ namespace Assignment2Torrent09196576
             _context.Trolleys.Add(troll);
             _context.SaveChanges();
 
+            Response.Redirect("ProductIndex.aspx");
         }
     }
 }
