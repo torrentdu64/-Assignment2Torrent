@@ -194,6 +194,7 @@
     <Content Include="Account\Web.config" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="ProductIndex.aspx" />
+    <Content Include="ProductOrder.aspx" />
     <Content Include="ProductShow.aspx" />
     <Content Include="Promo.jpg" />
     <Content Include="Scripts\bootstrap.js" />
@@ -410,6 +411,13 @@
     <Compile Include="ProductIndex.aspx.cs">
       <DependentUpon>ProductIndex.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductOrder.aspx.cs">
+      <DependentUpon>ProductOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductOrder.aspx.designer.cs">
+      <DependentUpon>ProductOrder.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProductShow.aspx.cs">
       <DependentUpon>ProductShow.aspx</DependentUpon>
