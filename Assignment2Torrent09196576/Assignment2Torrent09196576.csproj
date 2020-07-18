@@ -191,6 +191,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Account\Web.config" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="ProductIndex.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -363,9 +364,21 @@
     <Compile Include="Migrations\202007170211048_InitialModel.Designer.cs">
       <DependentUpon>202007170211048_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007172231528_AddProduct.cs" />
+    <Compile Include="Migrations\202007172231528_AddProduct.Designer.cs">
+      <DependentUpon>202007172231528_AddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007172235021_AddAttributeForProduct.cs" />
+    <Compile Include="Migrations\202007172235021_AddAttributeForProduct.Designer.cs">
+      <DependentUpon>202007172235021_AddAttributeForProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="ProductIndex.aspx.cs">
+      <DependentUpon>ProductIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -407,6 +420,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202007170211048_InitialModel.resx">
       <DependentUpon>202007170211048_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007172231528_AddProduct.resx">
+      <DependentUpon>202007172231528_AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007172235021_AddAttributeForProduct.resx">
+      <DependentUpon>202007172235021_AddAttributeForProduct.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

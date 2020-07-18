@@ -7,6 +7,7 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
+using Assignment2Torrent09196576.Models;
 
 namespace Assignment2Torrent09196576
 {
