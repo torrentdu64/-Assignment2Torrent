@@ -236,6 +236,8 @@
     <Content Include="Styles.css" />
     <Content Include="TrolleyDestroy.aspx" />
     <Content Include="TrolleyShow.aspx" />
+    <Content Include="UserAdminCreate.aspx" />
+    <Content Include="UserAdminIndex.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -507,6 +509,20 @@
     </Compile>
     <Compile Include="TrolleyShow.aspx.designer.cs">
       <DependentUpon>TrolleyShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserAdminCreate.aspx.cs">
+      <DependentUpon>UserAdminCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserAdminCreate.aspx.designer.cs">
+      <DependentUpon>UserAdminCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserAdminIndex.aspx.cs">
+      <DependentUpon>UserAdminIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserAdminIndex.aspx.designer.cs">
+      <DependentUpon>UserAdminIndex.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
