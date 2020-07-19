@@ -45,5 +45,13 @@ namespace Assignment2Torrent09196576
             
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            var look = Request.Params;
+            Button btn = (Button)sender;
+            btn.CommandArgument.ToString();
+
+        }
     }
 }

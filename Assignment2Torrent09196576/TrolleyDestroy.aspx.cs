@@ -8,15 +8,11 @@ using System.Web.UI.WebControls;
 
 namespace Assignment2Torrent09196576
 {
-    public partial class ProductOrder : System.Web.UI.Page
+    public partial class TrolleyDestroy : System.Web.UI.Page
     {
-        protected List<Product> meats;
-        protected List<Product> drinks;
-        protected List<Product> fruits;
-        protected List<Product> discounts;
         private ApplicationDbContext _context;
 
-        public ProductOrder()
+        public TrolleyDestroy()
         {
             _context = new ApplicationDbContext();
         }
@@ -26,7 +22,13 @@ namespace Assignment2Torrent09196576
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            var id = int.Parse(Request.Params["id"]);
+            var t = _context.Trolleys.Single(m => m.Id == id);
+            //Trolley trolley = new Trolley() { Id = id };
+            _context.Trolleys.Attach(t);
+            _context.Trolleys.Remove(t);
+            _context.SaveChanges();
+            Response.Redirect("/TrolleyShow.aspx");
         }
     }
 }

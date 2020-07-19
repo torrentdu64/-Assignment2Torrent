@@ -10,6 +10,6 @@
 namespace Assignment2Torrent09196576 {
     
     
-    public partial class TrolleyShow {
+    public partial class ProductAdmin {
     }
 }

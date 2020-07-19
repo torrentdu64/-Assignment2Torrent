@@ -1,16 +1,7 @@
-﻿
-<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ProductIndex.aspx.cs" Inherits="Assignment2Torrent09196576.ProductIndex" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ProductAdmin.aspx.cs" Inherits="Assignment2Torrent09196576.ProductAdmin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <asp:LoginView id="LoginView1" runat="server">
-     <AnonymousTemplate>
-         Please log in for personalized information.
-          <a href="/Account/Login" >
-            <div class="btn btn-primary">Log In</div>
-          </a>
-     </AnonymousTemplate>
-     <LoggedInTemplate>
-         <div class="container">
+    <div class="container">
              <div class="row">
                  <a href="/TrolleyShow.aspx" class="btn btn-primary">Checkout</a>
              </div>
@@ -19,7 +10,7 @@
          <div class="container">
              <div class="row">
                  <%--<a href="/ProductOrder.aspx" class="btn btn-primary">Order</a>--%>
-                 <asp:Button ID="Button2" runat="server" Text="Order" CssClass="btn btn-primary" OnClick="Button2_Click" />
+                <%-- <asp:Button ID="Button2" runat="server" Text="Order" CssClass="btn btn-primary" OnClick="Button2_Click" />--%>
              </div>
          </div>
 
@@ -30,7 +21,7 @@
                     <form action="/ProductIndex" >
                      
                       <input type="text" id="QData" name="fname"><br>
-                         <asp:Button ID="Button1" runat="server" Text="Search a product"  OnClick="Button1_Click" />
+                         <%--<asp:Button ID="Button1" runat="server" Text="Search a product"  OnClick="Button1_Click" />--%>
                     </form>
              </div>
          <% if (resultList != null)  { %>
@@ -71,6 +62,39 @@
          `<div class="container">
              
                   <h1 class="text-center">Products</h1>
+             <div class="row">
+
+                 <h2>Add a New Product</h2>
+
+                  <form action="/ProductCreate" id="CreateProduct" >
+                      <label for="Pname">Product name:</label><br>
+                      <input type="text" id="QData" name="Pname"><br>
+                      <label for="Pdes">Product description:</label><br>
+                      <textarea name="Pdes" form="CreateProduct"></textarea><br>
+                      <label for="Pprice">Product price:</label><br>
+                      <input type="text" id="QData" name="Pprice"><br>
+                      <label for="Pdiscount">Product dicount</label><br>
+                      <input type="text" id="QData" name="Pdiscount"><br>
+                      <label for="cat">Choose a Category:</label>
+
+                        <select name="Pcategory" id="cat">
+                          <option value="Fruit & Veg">Fruit & Veg</option>
+                          <option value="Meat & Seafood">Meat & Seafood</option>
+                          <option value="Fridge & Deli">Fridge & Deli</option>
+                          <option value="Bakery">Bakery</option>
+                            <option value="Frozen">Frozen</option>
+                            <option value="Pantry">Pantry</option>
+                            <option value="Beer & Wine">Beer & Wine</option>
+                            <option value="Drinks">Drinks</option>
+                            <option value="Health & Beauty">Health & Beauty</option>
+                            <option value="Baby & Child">Baby & Child</option>
+                            <option value="Pet">Pet</option>
+                        </select>
+                       <input type="submit" value="Submit">
+                         <%--<asp:Button ID="Button1" runat="server" Text="Search a product"  OnClick="Button1_Click" />--%>
+                    </form>
+             </div>
+
              <div class="row">
                   <h2>Meats</h2>
                  <div class="grid-product">
@@ -130,20 +154,4 @@
 
             
           </div>
-       
-         <asp:LoginName id="LoginName1" runat="Server"></asp:LoginName>.
-     </LoggedInTemplate>
-     <RoleGroups>
-         <asp:RoleGroup Roles="Admin">
-             <ContentTemplate>
-                 <asp:LoginName id="LoginName2" runat="Server" />, you are logged in as an administrator.
-             </ContentTemplate>
-         </asp:RoleGroup>
-     </RoleGroups>
- </asp:LoginView>
-    
-    
-       
-     
-
 </asp:Content>
