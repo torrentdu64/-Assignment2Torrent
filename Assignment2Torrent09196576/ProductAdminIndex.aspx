@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ProductAdmin.aspx.cs" Inherits="Assignment2Torrent09196576.ProductAdmin" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ProductAdminIndex.aspx.cs" Inherits="Assignment2Torrent09196576.ProductAdmin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="container">
@@ -68,13 +68,13 @@
 
                   <form action="/ProductCreate" id="CreateProduct" >
                       <label for="Pname">Product name:</label><br>
-                      <input type="text" id="QData" name="Pname"><br>
+                      <input type="text" name="Pname"><br>
                       <label for="Pdes">Product description:</label><br>
                       <textarea name="Pdes" form="CreateProduct"></textarea><br>
                       <label for="Pprice">Product price:</label><br>
-                      <input type="text" id="QData" name="Pprice"><br>
+                      <input type="text" name="Pprice"><br>
                       <label for="Pdiscount">Product dicount</label><br>
-                      <input type="text" id="QData" name="Pdiscount"><br>
+                      <input type="text"  name="Pdiscount"><br>
                       <label for="cat">Choose a Category:</label>
 
                         <select name="Pcategory" id="cat">
@@ -106,6 +106,7 @@
                          <div class="product-des">
                              <p><%=  item.Name %></p>
                              <a class="btn btn-success" href="/ProductShow?id=<%= item.Id %>">Show</a>
+                             <a class="btn btn-primary" href="/ProductEdit?id=<%= item.Id %>">Edit</a>
                          </div>
                      </div>       
 
