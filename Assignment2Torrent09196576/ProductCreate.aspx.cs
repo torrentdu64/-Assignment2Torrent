@@ -35,7 +35,15 @@ namespace Assignment2Torrent09196576
             product.Name = name;
             product.Description = description;
             product.Price = double.Parse(price);
-            product.Discount = discount;
+            if (discount == "")
+            {
+                product.Discount = null;
+            }
+            else
+            {
+                product.Discount = discount;
+            }
+            
             product.Category = category;
 
             _context.Products.Add(product);

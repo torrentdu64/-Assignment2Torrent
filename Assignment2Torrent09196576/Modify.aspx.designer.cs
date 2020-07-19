@@ -10,7 +10,7 @@
 namespace Assignment2Torrent09196576 {
     
     
-    public partial class ProductAdmin {
+    public partial class Modify {
         
         /// <summary>
         /// Button1 control.

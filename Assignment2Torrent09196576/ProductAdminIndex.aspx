@@ -18,9 +18,24 @@
              <div class="row">
                  <%--<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                  <asp:Button ID="Button1" runat="server" Text="Search a product"  OnClick="Button1_Click" />--%>
-                    <form action="/ProductIndex" >
+                    <form action="/ProductAdminIndex" >
                      
                       <input type="text" id="QData" name="fname"><br>
+                        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click1" />
+                         <select name="Pcategory" id="cat">
+                           <option value="null">No Category Search</option>
+                          <option value="Fruit & Veg">Fruit & Veg</option>
+                          <option value="Meat & Seafood">Meat & Seafood</option>
+                          <option value="Fridge & Deli">Fridge & Deli</option>
+                          <option value="Bakery">Bakery</option>
+                            <option value="Frozen">Frozen</option>
+                            <option value="Pantry">Pantry</option>
+                            <option value="Beer & Wine">Beer & Wine</option>
+                            <option value="Drinks">Drinks</option>
+                            <option value="Health & Beauty">Health & Beauty</option>
+                            <option value="Baby & Child">Baby & Child</option>
+                            <option value="Pet">Pet</option>
+                        </select><br>
                          <%--<asp:Button ID="Button1" runat="server" Text="Search a product"  OnClick="Button1_Click" />--%>
                     </form>
              </div>
@@ -106,7 +121,8 @@
                          <div class="product-des">
                              <p><%=  item.Name %></p>
                              <a class="btn btn-success" href="/ProductShow?id=<%= item.Id %>">Show</a>
-                             <a class="btn btn-primary" href="/ProductEdit?id=<%= item.Id %>">Edit</a>
+                             <a class="btn btn-primary" href="/Modify?id=<%= item.Id %>">Edit</a>
+                              <a class="btn btn-danger" href="/ProductDestroy?id=<%= item.Id %>">Destroy</a>
                          </div>
                      </div>       
 

@@ -1,6 +1,7 @@
 ﻿using Assignment2Torrent09196576.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.SqlServer;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -85,6 +86,43 @@ namespace Assignment2Torrent09196576
                     discounts.Add(p);
                 }
             }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        protected void Button1_Click1(object sender, EventArgs e)
+        {
+            var queryName = Request.Params["fname"];
+
+            var catQuery = Request.Params["Pcategory"];
+
+            //IQueryable<Product> resultName = null;
+            if (queryName != "" )
+            {
+               var  resultName =
+                      from Product in _context.Products
+                      where SqlFunctions.PatIndex("%" + queryName + "%", Product.Name) > 0
+                      select Product;
+
+                resultList = resultName.ToList();
+            }
+
+            if (catQuery != "null")
+            {
+                var resultName =
+                     from Product in _context.Products
+                     where SqlFunctions.PatIndex("%" + catQuery + "%", Product.Category) > 0
+                     select Product;
+
+                resultList = resultName.ToList();
+            }
+          
+
+
+           
         }
     }
 }

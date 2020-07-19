@@ -193,9 +193,12 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Account\Web.config" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Modify.aspx" />
     <Content Include="ProductAdminIndex.aspx" />
     <Content Include="ProductCreate.aspx" />
+    <Content Include="ProductDestroy.aspx" />
     <Content Include="ProductEdit.aspx" />
+    <Content Include="ProductEdit2.aspx" />
     <Content Include="ProductIndex.aspx" />
     <Content Include="ProductOrder.aspx" />
     <Content Include="ProductShow.aspx" />
@@ -417,6 +420,13 @@
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductTrolley.cs" />
     <Compile Include="Models\Trolley.cs" />
+    <Compile Include="Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ProductAdminIndex.aspx.cs">
       <DependentUpon>ProductAdminIndex.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -431,12 +441,23 @@
     <Compile Include="ProductCreate.aspx.designer.cs">
       <DependentUpon>ProductCreate.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ProductDestroy.aspx.cs">
+      <DependentUpon>ProductDestroy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductDestroy.aspx.designer.cs">
+      <DependentUpon>ProductDestroy.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ProductEdit.aspx.cs">
       <DependentUpon>ProductEdit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ProductEdit.aspx.designer.cs">
-      <DependentUpon>ProductEdit.aspx</DependentUpon>
+    <Compile Include="ProductEdit2.aspx.cs">
+      <DependentUpon>ProductEdit2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductEdit2.aspx.designer.cs">
+      <DependentUpon>ProductEdit2.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProductIndex.aspx.cs">
       <DependentUpon>ProductIndex.aspx</DependentUpon>
@@ -456,9 +477,6 @@
     <Compile Include="ProductUpdate.aspx.cs">
       <DependentUpon>ProductUpdate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ProductUpdate.aspx.designer.cs">
-      <DependentUpon>ProductUpdate.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
