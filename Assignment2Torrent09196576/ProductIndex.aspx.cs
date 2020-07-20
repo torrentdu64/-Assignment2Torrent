@@ -32,6 +32,8 @@ namespace Assignment2Torrent09196576
         public ProductIndex()
         {
             _context = new ApplicationDbContext();
+
+            
         }
         public override void Dispose()
         {
@@ -213,6 +215,6 @@ namespace Assignment2Torrent09196576
 
         //    return dbProducts;
         //}
-
+       
     }
 }

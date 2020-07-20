@@ -5,6 +5,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Microsoft.AspNet.Identity;
+
+
 
 namespace Assignment2Torrent09196576
 {
@@ -60,6 +63,19 @@ namespace Assignment2Torrent09196576
            // _context.SaveChanges();
 
             Response.Redirect("Default.aspx");
+        }
+
+        public bool IsLogIn()
+        {
+            var currentUser = System.Web.HttpContext.Current.User.Identity.GetUserId();
+            if (currentUser != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

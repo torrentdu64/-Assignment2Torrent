@@ -9,9 +9,20 @@
                      <h1><%= product.Name %></h1>
                      <h3>     <%= product.Description %> </h3>
                      <h2>$    <%= product.Price %> </h2>
-                      <a href="/AddTrolley?id=<%= product.Id %>" >
+
+                    <% if (IsLogIn())
+                        { %>
+                            <a href="/AddTrolley?id=<%= product.Id %>" >
                             <div class="btn btn-success">Add Trolley</div>
                       </a>
+                      <%  }
+                                    else
+                                    {%>
+                    <p>Sign in for add Product</p>
+                       <a href="/Account/Login" >
+                        <div class="btn btn-success">Add Trolley</div>
+                        </a>
+                    <% } %>
                 </div>
             </div>
         </div>

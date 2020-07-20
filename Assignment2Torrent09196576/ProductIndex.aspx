@@ -2,14 +2,7 @@
 <%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ProductIndex.aspx.cs" Inherits="Assignment2Torrent09196576.ProductIndex" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <asp:LoginView id="LoginView1" runat="server">
-     <AnonymousTemplate>
-         Please log in for personalized information.
-          <a href="/Account/Login" >
-            <div class="btn btn-primary">Log In</div>
-          </a>
-     </AnonymousTemplate>
-     <LoggedInTemplate>
+   
          <div class="container">
              <div class="row">
                  <a href="/TrolleyShow.aspx" class="btn btn-primary">Checkout</a>
@@ -27,22 +20,9 @@
              <div class="row">
                  <%--<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                  <asp:Button ID="Button1" runat="server" Text="Search a product"  OnClick="Button1_Click" />--%>
-                    <form action="/ProductIndex" >
-                     
-                      <input type="text" id="QData" name="fname"><br>
-                         <asp:Button ID="Button1" runat="server" Text="Search a product"  OnClick="Button1_Click" />
-                    </form>
+                    
              </div>
-         <% if (resultList != null)  { %>
-            <div class="row">
-                 <ul>
-                     <% foreach (var item in resultList)  { %>
-                             <li><%= item.Name %></li>
-                       <%  } %>
-                     
-                 </ul>
-             </div>
-            <% } %>
+        
          </div>
 
 
@@ -69,8 +49,43 @@
         
   
          `<div class="container">
+
              
-                  <h1 class="text-center">Products</h1>
+             <h1 class="text-center">Products</h1>
+             <div class="row">
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                        <%--<button class="btn btn-default" type="button">
+                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                        </button>--%>
+                        </span>
+                        <form action="/ProductIndex" >
+                     
+                      <input type="text" id="QData" name="fname" class="form-control" placeholder="Search for...">
+                       <%--  <asp:Button ID="Button1" runat="server" Text="Search a product" />--%>
+
+                            <asp:LinkButton runat="server" ID="uxSearch" CssClass="btn btn-default"  OnClick="Button1_Click" >
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                Search
+                            </asp:LinkButton>
+                    </form>
+                        <%--<input type="text" class="form-control" placeholder="Search for...">--%>
+                    </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+              
+             </div>
+                 <% if (resultList != null)  { %>
+                    <div class="row">
+                         <ul>
+                             <% foreach (var item in resultList)  { %>
+                                     <li><%= item.Name %></li>
+                               <%  } %>
+                     
+                         </ul>
+                     </div>
+                  <% } %>
+             
              <div class="row">
                   <h2>Meats</h2>
                  <div class="grid-product">
@@ -130,7 +145,17 @@
 
             
           </div>
-       
+
+
+        <asp:LoginView id="LoginView1" runat="server">
+     <AnonymousTemplate>
+         Please log in for personalized information.
+          <a href="/Account/Login" >
+            <div class="btn btn-primary">Log In</div>
+          </a>
+     </AnonymousTemplate>
+     <LoggedInTemplate>
+
          <asp:LoginName id="LoginName1" runat="Server"></asp:LoginName>.
      </LoggedInTemplate>
      <RoleGroups>

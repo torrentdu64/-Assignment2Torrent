@@ -13,6 +13,7 @@ namespace Assignment2Torrent09196576
             var settings = new FriendlyUrlSettings();
             settings.AutoRedirectMode = RedirectMode.Permanent;
             routes.EnableFriendlyUrls(settings);
+           
         }
     }
 }
