@@ -36,7 +36,7 @@
         <p> If you are outside New Zealand please contact us via email.</p>
         </div>
         <div class="contact-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3188.5430392497206!2d174.80582081489175!3d-36.94908549283135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d4f1891b83479%3A0x7cd9044f4d3a339d!2s80%20Favona%20Road%2C%20Favona%2C%20Auckland%202024!5e0!3m2!1sen!2snz!4v1595296725904!5m2!1sen!2snz" width="600" height="580" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3188.5430392497206!2d174.80582081489175!3d-36.94908549283135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d4f1891b83479%3A0x7cd9044f4d3a339d!2s80%20Favona%20Road%2C%20Favona%2C%20Auckland%202024!5e0!3m2!1sen!2snz!4v1595296725904!5m2!1sen!2snz" width="600" height="630" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
     </div>
 </asp:Content>
