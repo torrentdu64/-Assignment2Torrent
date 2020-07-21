@@ -45,7 +45,9 @@ namespace Assignment2Torrent09196576
             _context.Trolleys.Add(troll);
             _context.SaveChanges();
 
-            Response.Redirect("ProductIndex.aspx");
+            
+
+            Response.Redirect("ProductIndex.aspx?status=Add To Cart");
         }
     }
 }

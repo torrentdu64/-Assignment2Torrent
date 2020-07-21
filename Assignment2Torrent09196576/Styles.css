@@ -27,6 +27,7 @@ h4 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 40px;
+    margin-bottom: 50px;
 }
 
 .wrap-product {
@@ -60,4 +61,30 @@ h4 {
     position: relative;
     display: initial;
     border-collapse: separate;
+}
+
+#btn-position {
+    margin-left: 470px;
+}
+
+.contact-page {
+    display: flex;
+    align-items: center;
+    padding : 20px;
+}
+
+
+.contact-info {
+    background: white;
+    padding: 10px;
+    margin: 10px;
+    webkit-box-shadow: 15px 28px 44px -26px rgba(0,0,0,0.51);
+    -moz-box-shadow: 15px 28px 44px -26px rgba(0,0,0,0.51);
+    box-shadow: 15px 28px 44px -26px rgba(0,0,0,0.51);  
+}
+
+.contact-map {
+    webkit-box-shadow: 15px 28px 44px -26px rgba(0,0,0,0.51);
+    -moz-box-shadow: 15px 28px 44px -26px rgba(0,0,0,0.51);
+    box-shadow: 15px 28px 44px -26px rgba(0,0,0,0.51);
 }

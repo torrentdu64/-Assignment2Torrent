@@ -42,8 +42,18 @@ namespace Assignment2Torrent09196576
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            try
+            {
+                string strStatus = Request.QueryString["status"].ToString();
+                if (strStatus.ToUpper() == "ADD TO CART")
+                    Response.Write("You product is add to your cart successfully"); // remenber to create flash message html with absolute property
+            }
+            catch (Exception)
+            {
 
-
+                
+            }
+           
             //var query = _context.Products
             //     .GroupBy(p => p.Category)
             //     .Select(g => new { product = g.ToList() , count = g.Count()}).ToList();
@@ -147,7 +157,7 @@ namespace Assignment2Torrent09196576
 
             resultList = result.ToList();
 
-            //Response.Redirect("/ProductIndex.aspx");
+            //Response.Redirect("/ProductIndex.aspx#search");
 
         }
 
