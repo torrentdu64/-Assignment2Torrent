@@ -386,39 +386,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202007170211048_InitialModel.cs" />
-    <Compile Include="Migrations\202007170211048_InitialModel.Designer.cs">
-      <DependentUpon>202007170211048_InitialModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007172231528_AddProduct.cs" />
-    <Compile Include="Migrations\202007172231528_AddProduct.Designer.cs">
-      <DependentUpon>202007172231528_AddProduct.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007172235021_AddAttributeForProduct.cs" />
-    <Compile Include="Migrations\202007172235021_AddAttributeForProduct.Designer.cs">
-      <DependentUpon>202007172235021_AddAttributeForProduct.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007180056492_AddTrolleyTable.cs" />
-    <Compile Include="Migrations\202007180056492_AddTrolleyTable.Designer.cs">
-      <DependentUpon>202007180056492_AddTrolleyTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007180122392_AddProductTrolleyTable.cs" />
-    <Compile Include="Migrations\202007180122392_AddProductTrolleyTable.Designer.cs">
-      <DependentUpon>202007180122392_AddProductTrolleyTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007180323483_AddCategoryToProduct.cs" />
-    <Compile Include="Migrations\202007180323483_AddCategoryToProduct.Designer.cs">
-      <DependentUpon>202007180323483_AddCategoryToProduct.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007182231337_AddUserToTrolley.cs" />
-    <Compile Include="Migrations\202007182231337_AddUserToTrolley.Designer.cs">
-      <DependentUpon>202007182231337_AddUserToTrolley.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007182322269_ChangePriceToDouble.cs" />
-    <Compile Include="Migrations\202007182322269_ChangePriceToDouble.Designer.cs">
-      <DependentUpon>202007182322269_ChangePriceToDouble.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Context.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductTrolley.cs" />
@@ -535,6 +504,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -546,32 +516,6 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202007170211048_InitialModel.resx">
-      <DependentUpon>202007170211048_InitialModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007172231528_AddProduct.resx">
-      <DependentUpon>202007172231528_AddProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007172235021_AddAttributeForProduct.resx">
-      <DependentUpon>202007172235021_AddAttributeForProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007180056492_AddTrolleyTable.resx">
-      <DependentUpon>202007180056492_AddTrolleyTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007180122392_AddProductTrolleyTable.resx">
-      <DependentUpon>202007180122392_AddProductTrolleyTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007180323483_AddCategoryToProduct.resx">
-      <DependentUpon>202007180323483_AddCategoryToProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007182231337_AddUserToTrolley.resx">
-      <DependentUpon>202007182231337_AddUserToTrolley.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007182322269_ChangePriceToDouble.resx">
-      <DependentUpon>202007182322269_ChangePriceToDouble.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
