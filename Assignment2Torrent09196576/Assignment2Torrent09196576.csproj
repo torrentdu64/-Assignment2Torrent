@@ -382,7 +382,12 @@
     <Compile Include="Migrations\202007180122392_AddProductTrolleyTable.Designer.cs">
       <DependentUpon>202007180122392_AddProductTrolleyTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007220224105_AddCustomerToTrolley.cs" />
+    <Compile Include="Migrations\202007220224105_AddCustomerToTrolley.Designer.cs">
+      <DependentUpon>202007220224105_AddCustomerToTrolley.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductTrolley.cs" />
@@ -455,6 +460,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007180122392_AddProductTrolleyTable.resx">
       <DependentUpon>202007180122392_AddProductTrolleyTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007220224105_AddCustomerToTrolley.resx">
+      <DependentUpon>202007220224105_AddCustomerToTrolley.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

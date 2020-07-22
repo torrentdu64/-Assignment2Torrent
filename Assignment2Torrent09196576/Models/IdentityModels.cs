@@ -32,7 +32,7 @@ namespace Assignment2Torrent09196576.Models
     {
         public DbSet<Product> Products { get; set; }
         public DbSet<Trolley> Trolleys { get; set; }
-
+        public DbSet<Customer>  Customers { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
