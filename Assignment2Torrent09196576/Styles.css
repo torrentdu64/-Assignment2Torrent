@@ -1,0 +1,90 @@
+﻿body {
+    background: #f1f2f3;    
+}
+h4 {
+    color: black;
+}
+
+.grid-promo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+
+}
+
+.wrap-promo {
+   
+    background: #00000026;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    -webkit-box-shadow: 15px 28px 44px -26px rgba(0,0,0,0.51);
+    -moz-box-shadow: 15px 28px 44px -26px rgba(0,0,0,0.51);
+    box-shadow: 15px 28px 44px -26px rgba(0,0,0,0.51);
+}
+
+.grid-product {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 40px;
+    margin-bottom: 50px;
+}
+
+.wrap-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;
+    width: 224px;
+    padding: 15px;
+    webkit-box-shadow: 15px 28px 44px -26px rgba(0,0,0,0.51);
+    -moz-box-shadow: 15px 28px 44px -26px rgba(0,0,0,0.51);
+    box-shadow: 15px 28px 44px -26px rgba(0,0,0,0.51);
+}
+
+    .wrap-product img {
+        align-self: center;
+    }
+
+    .wrap-product .product-des {
+        display: flex;
+        flex-direction: column;
+    }
+
+.grid-show{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    margin: 30px;
+}
+
+.input-group {
+    position: relative;
+    display: initial;
+    border-collapse: separate;
+}
+
+#btn-position {
+    margin-left: 470px;
+}
+
+.contact-page {
+    display: flex;
+    align-items: center;
+    padding : 20px;
+}
+
+
+.contact-info {
+    background: white;
+    padding: 30px;
+    margin: 10px;
+    webkit-box-shadow: 15px 28px 44px -26px rgba(0,0,0,0.51);
+    -moz-box-shadow: 15px 28px 44px -26px rgba(0,0,0,0.51);
+    box-shadow: 15px 28px 44px -26px rgba(0,0,0,0.51);  
+}
+
+.contact-map {
+    webkit-box-shadow: 15px 28px 44px -26px rgba(0,0,0,0.51);
+    -moz-box-shadow: 15px 28px 44px -26px rgba(0,0,0,0.51);
+    box-shadow: 15px 28px 44px -26px rgba(0,0,0,0.51);
+}
