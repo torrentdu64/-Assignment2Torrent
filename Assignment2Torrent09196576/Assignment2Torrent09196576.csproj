@@ -172,6 +172,7 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="AddTrolley.aspx" />
+    <Content Include="AdminCustomerIndex.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -356,6 +357,13 @@
     </Compile>
     <Compile Include="AddTrolley.aspx.designer.cs">
       <DependentUpon>AddTrolley.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCustomerIndex.aspx.cs">
+      <DependentUpon>AdminCustomerIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCustomerIndex.aspx.designer.cs">
+      <DependentUpon>AdminCustomerIndex.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">

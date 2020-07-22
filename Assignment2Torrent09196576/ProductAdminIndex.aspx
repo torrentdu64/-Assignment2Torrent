@@ -113,6 +113,10 @@
              </div>
 
              <div class="row">
+                 <a href="/AdminCustomerIndex" class="btn btn-primary">Customer Panel</a>
+             </div>
+
+             <div class="row">
                   <h2>Meats</h2>
                  <div class="grid-product">
                      
