@@ -8,12 +8,12 @@ using System.Web.UI.WebControls;
 
 namespace Assignment2Torrent09196576
 {
-    public partial class AdminCustomerIndex : System.Web.UI.Page
+    public partial class EditCustomer : System.Web.UI.Page
     {
+        protected Customer customer;
+      
         private ApplicationDbContext _context;
-        protected List<Customer> customers;
-
-        public AdminCustomerIndex()
+        public EditCustomer()
         {
             _context = new ApplicationDbContext();
         }
@@ -23,22 +23,21 @@ namespace Assignment2Torrent09196576
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-           
-            customers = _context.Customers.ToList();
+            var id = int.Parse(Request.Params["id"]);
+            customer = _context.Customers.Single(m => m.Id == id);
         }
+      
 
-     
-        protected void Button1_Click1(object sender, EventArgs e)
+        protected void Button1_Click(object sender, EventArgs e)
         {
-            var name = Request.Params["Pname"];
+            var name = Request.Params["Cname"];
 
-            Customer customer = new Customer();
             customer.Name = name;
 
-            _context.Customers.Add(customer);
+            
+
             _context.SaveChanges();
 
-            name = null;
             Response.Redirect("AdminCustomerIndex.aspx");
 
         }

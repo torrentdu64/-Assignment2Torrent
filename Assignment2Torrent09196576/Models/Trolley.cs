@@ -15,6 +15,8 @@ namespace Assignment2Torrent09196576.Models
         
         public virtual ApplicationUser User { get; set; }
 
+        public virtual Customer Customer { get; set; }
+
         public virtual ICollection<ProductTrolley> ProductTrolleys { get; set; }
     }
 }
