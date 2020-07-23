@@ -454,6 +454,10 @@
     <Compile Include="Migrations\202007220336282_AddCustomerTable.Designer.cs">
       <DependentUpon>202007220336282_AddCustomerTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007230033493_AddAttributeToCustomer.cs" />
+    <Compile Include="Migrations\202007230033493_AddAttributeToCustomer.Designer.cs">
+      <DependentUpon>202007230033493_AddAttributeToCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -611,6 +615,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007220336282_AddCustomerTable.resx">
       <DependentUpon>202007220336282_AddCustomerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007230033493_AddAttributeToCustomer.resx">
+      <DependentUpon>202007230033493_AddAttributeToCustomer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
