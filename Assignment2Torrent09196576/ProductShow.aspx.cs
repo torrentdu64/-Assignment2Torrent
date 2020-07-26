@@ -16,7 +16,7 @@ namespace Assignment2Torrent09196576
     {
 
         protected Product product;
-
+        protected bool isItLogin = false;
         
         private ApplicationDbContext _context;
 
@@ -32,6 +32,20 @@ namespace Assignment2Torrent09196576
        
         protected void Page_Load(object sender, EventArgs e)
         {
+            HttpCookie myCookie = Request.Cookies["Customer"];
+            if (myCookie == null)
+            {
+                //No cookie found or cookie expired.
+                //Can read product
+                isItLogin = false;
+            }
+            else
+            {
+                isItLogin = true;
+            }
+
+
+
             var id = int.Parse(Request.Params["id"]);
 
             var dbproduct = _context.Products.SingleOrDefault(m => m.Id == id);
@@ -63,6 +77,12 @@ namespace Assignment2Torrent09196576
            // _context.SaveChanges();
 
             Response.Redirect("Default.aspx");
+        }
+
+
+        public bool IsNotLogin()
+        {
+            return false;
         }
 
         public bool IsLogIn()

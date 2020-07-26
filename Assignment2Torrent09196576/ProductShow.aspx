@@ -7,10 +7,11 @@
                 <img src="./food.jpg" alt="Alternate Text" width="425" height="425" />
                 <div class="wrap-detail">
                      <h1><%= product.Name %></h1>
+                    <a href="/ProductIndex">Back to the shop</a>
                      <h3>     <%= product.Description %> </h3>
                      <h2>$    <%= product.Price %> </h2>
 
-                    <% if (IsLogIn())
+                    <% if (isItLogin)
                         { %>
                             <a href="/AddTrolley?id=<%= product.Id %>" >
                             <div class="btn btn-success">Add Trolley</div>
@@ -19,7 +20,7 @@
                                     else
                                     {%>
                     <p>Sign in for add Product</p>
-                       <a href="/Account/Login" >
+                       <a href="/Login" >
                         <div class="btn btn-success">Add Trolley</div>
                         </a>
                     <% } %>

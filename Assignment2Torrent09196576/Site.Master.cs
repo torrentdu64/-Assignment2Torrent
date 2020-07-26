@@ -8,6 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
 using Assignment2Torrent09196576.Models;
+using System.Linq;
 
 namespace Assignment2Torrent09196576
 {
@@ -16,6 +17,18 @@ namespace Assignment2Torrent09196576
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
         private string _antiXsrfTokenValue;
+        protected string email;
+        private ApplicationDbContext _context;
+
+
+        public SiteMaster()
+        {
+            _context = new ApplicationDbContext();
+        }
+        public override void Dispose()
+        {
+            base.Dispose();
+        }
 
         protected void Page_Init(object sender, EventArgs e)
         {
@@ -47,6 +60,34 @@ namespace Assignment2Torrent09196576
             }
 
             Page.PreLoad += master_Page_PreLoad;
+
+            //try
+            //{
+            //    HttpCookie myCookie = Request.Cookies["Customer"];
+            //    if (myCookie == null)
+            //    {
+
+            //        Response.Redirect("Login.aspx");
+            //    }
+
+
+            //    if (!string.IsNullOrEmpty(myCookie.Values["Customer_id"]))
+            //    {
+            //        int userId = int.Parse(myCookie.Values["Customer_id"].ToString());
+
+            //        var adminOrCustomer = _context.Customers.SingleOrDefault(m => m.Id == userId);
+
+            //        email = adminOrCustomer.Name;
+
+
+            //    }
+            //}
+            //catch (Exception)
+            //{
+
+            //    email = "<a href='/login'>Login</a>";
+            //}
+
         }
 
         protected void master_Page_PreLoad(object sender, EventArgs e)

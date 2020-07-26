@@ -90,8 +90,7 @@
                       <textarea name="Pdes" form="CreateProduct"></textarea><br>
                       <label for="Pprice">Product price:</label><br>
                       <input type="text" name="Pprice"><br>
-                      <label for="Pdiscount">Product dicount</label><br>
-                      <input type="text"  name="Pdiscount"><br>
+                     
                       <label for="cat">Choose a Category:</label>
 
                         <select name="Pcategory" id="cat">
@@ -127,7 +126,7 @@
                          <div class="product-des">
                              <p><%=  item.Name %></p>
                              <a class="btn btn-success" href="/ProductShow?id=<%= item.Id %>">Show</a>
-                             <a class="btn btn-primary" href="/Modify?id=<%= item.Id %>">Edit</a>
+                             <a class="btn btn-primary" href="/Modify?id=<%= item.Id %>">Add Discount</a>
                               <a class="btn btn-danger" href="/ProductDestroy?id=<%= item.Id %>">Destroy</a>
                          </div>
                      </div>       
@@ -147,6 +146,8 @@
                          <div class="product-des">
                              <p><%=  item.Name %></p>
                              <a class="btn btn-success" href="/ProductShow?id=<%= item.Id %>">Show</a>
+                             <a class="btn btn-primary" href="/Modify?id=<%= item.Id %>">Add Discount</a>
+                              <a class="btn btn-danger" href="/ProductDestroy?id=<%= item.Id %>">Destroy</a>
                          </div>
                      </div>       
 
@@ -164,7 +165,9 @@
                          <img src="./food.jpg" alt="Alternate Text" width="170" height="170" />
                          <div class="product-des">
                              <p><%=  item.Name %></p>
-                             <a class="btn btn-success" href="/ProductShow?id=<%= item.Id %>">Show</a>
+                            <a class="btn btn-success" href="/ProductShow?id=<%= item.Id %>">Show</a>
+                             <a class="btn btn-primary" href="/Modify?id=<%= item.Id %>">Add Discount</a>
+                              <a class="btn btn-danger" href="/ProductDestroy?id=<%= item.Id %>">Destroy</a>
                          </div>
                      </div>       
 
@@ -173,6 +176,117 @@
                  </div>
             </div>
 
+             
+
+             <div class="row">
+                  <h2>Fridge</h2>
+                 <div class="grid-product">
+                     
+                  <% foreach (var item in fridge)  { %>
+                    
+                     <div class="wrap-product">
+                         <img src="./food.jpg" alt="Alternate Text" width="170" height="170" />
+                         <div class="product-des">
+                             <p><%=  item.Name %></p>
+                            <a class="btn btn-success" href="/ProductShow?id=<%= item.Id %>">Show</a>
+                             <a class="btn btn-primary" href="/Modify?id=<%= item.Id %>">Add Discount</a>
+                              <a class="btn btn-danger" href="/ProductDestroy?id=<%= item.Id %>">Destroy</a>
+                         </div>
+                     </div>       
+
+                  <% } %>
+
+                 </div>
+            </div>
+
+             <div class="row">
+                  <h2>Bakery</h2>
+                 <div class="grid-product">
+                     
+                  <% foreach (var item in bakery)  { %>
+                    
+                     <div class="wrap-product">
+                         <img src="./food.jpg" alt="Alternate Text" width="170" height="170" />
+                         <div class="product-des">
+                             <p><%=  item.Name %></p>
+                            <a class="btn btn-success" href="/ProductShow?id=<%= item.Id %>">Show</a>
+                             <a class="btn btn-primary" href="/Modify?id=<%= item.Id %>">Add Discount</a>
+                              <a class="btn btn-danger" href="/ProductDestroy?id=<%= item.Id %>">Destroy</a>
+                         </div>
+                     </div>       
+
+                  <% } %>
+
+                 </div>
+            </div>
+
+             <div class="row">
+                  <h2>Frozen</h2>
+                 <div class="grid-product">
+                     
+                  <% foreach (var item in Frozen)  { %>
+                    
+                     <div class="wrap-product">
+                         <img src="./food.jpg" alt="Alternate Text" width="170" height="170" />
+                         <div class="product-des">
+                             <p><%=  item.Name %></p>
+                            <a class="btn btn-success" href="/ProductShow?id=<%= item.Id %>">Show</a>
+                             <a class="btn btn-primary" href="/Modify?id=<%= item.Id %>">Add Discount</a>
+                              <a class="btn btn-danger" href="/ProductDestroy?id=<%= item.Id %>">Destroy</a>
+                         </div>
+                     </div>       
+
+                  <% } %>
+
+                 </div>
+            </div>
+
+        
+        <div class="row">
+                  <h2>Pantry</h2>
+                 <div class="grid-product">
+                     
+                  <% foreach (var item in pantry)  { %>
+                    
+                     <div class="wrap-product">
+                         <img src="./food.jpg" alt="Alternate Text" width="170" height="170" />
+                         <div class="product-des">
+                             <p><%=  item.Name %></p>
+                            <a class="btn btn-success" href="/ProductShow?id=<%= item.Id %>">Show</a>
+                             <a class="btn btn-primary" href="/Modify?id=<%= item.Id %>">Add Discount</a>
+                              <a class="btn btn-danger" href="/ProductDestroy?id=<%= item.Id %>">Destroy</a>
+                         </div>
+                     </div>       
+
+                  <% } %>
+
+                 </div>
+            </div>
+
+             <div class="row">
+                  <h2>Beer</h2>
+                 <div class="grid-product">
+                     
+                  <% foreach (var item in beer)  { %>
+                    
+                     <div class="wrap-product">
+                         <img src="./food.jpg" alt="Alternate Text" width="170" height="170" />
+                         <div class="product-des">
+                             <p><%=  item.Name %></p>
+                            <a class="btn btn-success" href="/ProductShow?id=<%= item.Id %>">Show</a>
+                             <a class="btn btn-primary" href="/Modify?id=<%= item.Id %>">Add Discount</a>
+                              <a class="btn btn-danger" href="/ProductDestroy?id=<%= item.Id %>">Destroy</a>
+                         </div>
+                     </div>       
+
+                  <% } %>
+
+                 </div>
+            </div>
+
+   
+        
+       
              
 
             

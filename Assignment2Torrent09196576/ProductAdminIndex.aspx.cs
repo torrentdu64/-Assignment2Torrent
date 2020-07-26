@@ -19,6 +19,19 @@ namespace Assignment2Torrent09196576
         protected List<Product> drinks;
         protected List<Product> fruits;
         protected List<Product> discounts;
+        protected List<Product> fridge;
+        protected List<Product> bakery;
+        protected List<Product> Frozen;
+        protected List<Product> pantry;
+        protected List<Product> beer;
+
+
+
+      
+        
+
+
+
         public TextBox TextBox1;
         protected List<Product> resultList;
 
@@ -30,13 +43,51 @@ namespace Assignment2Torrent09196576
         {
             base.Dispose();
         }
+
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            var query = _context.Products.ToList();
+            try
+            {
+                HttpCookie myCookie = Request.Cookies["Customer"];
+                if (myCookie == null)
+                {
+                  
+                    Response.Redirect("Login.aspx");
+                }
+
+                
+                if (!string.IsNullOrEmpty(myCookie.Values["Customer_id"]))
+                {
+                    int userId = int.Parse(myCookie.Values["Customer_id"].ToString());
+                    
+                    var adminOrCustomer = _context.Customers.Single(m => m.Id == userId );
+
+                   if (adminOrCustomer.Role == "Customer")
+                    {
+                        Response.Redirect("ProductIndex.aspx");
+                    }
+
+
+                }
+            }
+            catch (Exception)
+            {
+
+               // redirec error page
+            }
+
+            
+ 
+                       
+  
+                
+             var query = _context.Products.ToList();
             meats = new List<Product>();
             foreach (var item in query)
             {
-                if (item.Category == "Meat")
+                if (item.Category == "Meat & Seafood")
                 {
                     Product p = new Product();
                     p.Id = item.Id;
@@ -62,7 +113,7 @@ namespace Assignment2Torrent09196576
             fruits = new List<Product>();
             foreach (var item in query)
             {
-                if (item.Category == "Fruit")
+                if (item.Category == "Fruit & Veg")
                 {
                     Product p = new Product();
                     p.Id = item.Id;
@@ -86,6 +137,76 @@ namespace Assignment2Torrent09196576
                     discounts.Add(p);
                 }
             }
+            fridge = new List<Product>();
+            foreach (var item in query)
+            {
+                if (item.Category == "Fridge & Deli")
+                {
+                    Product p = new Product();
+                    p.Id = item.Id;
+                    p.Name = item.Name;
+                    p.Description = item.Description;
+                    p.Price = item.Price;
+
+                    fridge.Add(p);
+                }
+            }
+            bakery = new List<Product>();
+            foreach (var item in query)
+            {
+                if (item.Category == "Bakery")
+                {
+                    Product p = new Product();
+                    p.Id = item.Id;
+                    p.Name = item.Name;
+                    p.Description = item.Description;
+                    p.Price = item.Price;
+
+                    bakery.Add(p);
+                }
+            }
+            Frozen = new List<Product>();
+            foreach (var item in query)
+            {
+                if (item.Category == "Frozen")
+                {
+                    Product p = new Product();
+                    p.Id = item.Id;
+                    p.Name = item.Name;
+                    p.Description = item.Description;
+                    p.Price = item.Price;
+
+                    Frozen.Add(p);
+                }
+            }
+            pantry = new List<Product>();
+            foreach (var item in query)
+            {
+                if (item.Category == "Pantry")
+                {
+                    Product p = new Product();
+                    p.Id = item.Id;
+                    p.Name = item.Name;
+                    p.Description = item.Description;
+                    p.Price = item.Price;
+
+                    pantry.Add(p);
+                }
+            }
+            beer = new List<Product>();
+            foreach (var item in query)
+            {
+                if (item.Category == "Beer & Wine")
+                {
+                    Product p = new Product();
+                    p.Id = item.Id;
+                    p.Name = item.Name;
+                    p.Description = item.Description;
+                    p.Price = item.Price;
+
+                    beer.Add(p);
+                }
+            }             
         }
 
         protected void Button1_Click(object sender, EventArgs e)

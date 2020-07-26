@@ -42,6 +42,45 @@ namespace Assignment2Torrent09196576
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            try
+            {
+                ////Assuming user comes back after several hours. several < 12.
+                ////Read the cookie from Request.
+                HttpCookie myCookie = Request.Cookies["Customer"];
+                if (myCookie == null)
+                {
+                    //No cookie found or cookie expired.
+                    //Can read product
+                   
+                }
+
+                ////ok - cookie is found.
+                ////Gracefully check if the cookie has the key-value as expected.
+                if (!string.IsNullOrEmpty(myCookie.Values["Customer_id"]))
+                {
+                    int userId = int.Parse(myCookie.Values["Customer_id"].ToString());
+                    //Yes userId is found. Mission accomplished
+
+                    var adminOrCustomer = _context.Customers.SingleOrDefault(m => m.Id == userId );
+
+                    if (adminOrCustomer.Role == "Admin")
+                    {
+                        Response.Redirect("ProductAdminIndex.aspx");
+                    }
+
+
+                }
+            }
+            catch (Exception)
+            {
+
+               
+            }
+            
+
+
+
             try
             {
                 string strStatus = Request.QueryString["status"].ToString();

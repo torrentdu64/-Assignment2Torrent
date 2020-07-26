@@ -31,9 +31,13 @@ namespace Assignment2Torrent09196576
         protected void Button1_Click1(object sender, EventArgs e)
         {
             var name = Request.Params["Pname"];
+            var password = Request.Params["Ppassword"];
+            var role = Request.Params["Prole"];
 
             Customer customer = new Customer();
             customer.Name = name;
+            customer.Password = password;
+            customer.Role = role;
 
             _context.Customers.Add(customer);
             _context.SaveChanges();
