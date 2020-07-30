@@ -106,6 +106,8 @@
                          <div class="product-des">
                              <p><%=  item.Name %></p>
                              <a class="btn btn-success" href="/ProductShow?id=<%= item.Id %>">Show</a>
+                             
+                              
                          </div>
                      </div>       
 
@@ -124,6 +126,8 @@
                          <div class="product-des">
                              <p><%=  item.Name %></p>
                              <a class="btn btn-success" href="/ProductShow?id=<%= item.Id %>">Show</a>
+                             
+                              
                          </div>
                      </div>       
 
@@ -141,7 +145,9 @@
                          <img src="./food.jpg" alt="Alternate Text" width="170" height="170" />
                          <div class="product-des">
                              <p><%=  item.Name %></p>
-                             <a class="btn btn-success" href="/ProductShow?id=<%= item.Id %>">Show</a>
+                            <a class="btn btn-success" href="/ProductShow?id=<%= item.Id %>">Show</a>
+                             
+                              
                          </div>
                      </div>       
 
@@ -152,30 +158,120 @@
 
              
 
+             <div class="row">
+                  <h2>Fridge</h2>
+                 <div class="grid-product">
+                     
+                  <% foreach (var item in fridge)  { %>
+                    
+                     <div class="wrap-product">
+                         <img src="./food.jpg" alt="Alternate Text" width="170" height="170" />
+                         <div class="product-des">
+                             <p><%=  item.Name %></p>
+                            <a class="btn btn-success" href="/ProductShow?id=<%= item.Id %>">Show</a>
+                             
+                              
+                         </div>
+                     </div>       
+
+                  <% } %>
+
+                 </div>
+            </div>
+
+             <div class="row">
+                  <h2>Bakery</h2>
+                 <div class="grid-product">
+                     
+                  <% foreach (var item in bakery)  { %>
+                    
+                     <div class="wrap-product">
+                         <img src="./food.jpg" alt="Alternate Text" width="170" height="170" />
+                         <div class="product-des">
+                             <p><%=  item.Name %></p>
+                            <a class="btn btn-success" href="/ProductShow?id=<%= item.Id %>">Show</a>
+                             
+                              
+                         </div>
+                     </div>       
+
+                  <% } %>
+
+                 </div>
+            </div>
+
+             <div class="row">
+                  <h2>Frozen</h2>
+                 <div class="grid-product">
+                     
+                  <% foreach (var item in Frozen)  { %>
+                    
+                     <div class="wrap-product">
+                         <img src="./food.jpg" alt="Alternate Text" width="170" height="170" />
+                         <div class="product-des">
+                             <p><%=  item.Name %></p>
+                            <a class="btn btn-success" href="/ProductShow?id=<%= item.Id %>">Show</a>
+                             
+                              
+                         </div>
+                     </div>       
+
+                  <% } %>
+
+                 </div>
+            </div>
+
+        
+             <div class="row">
+                  <h2>Pantry</h2>
+                 <div class="grid-product">
+                     
+                  <% foreach (var item in pantry)  { %>
+                    
+                     <div class="wrap-product">
+                         <img src="./food.jpg" alt="Alternate Text" width="170" height="170" />
+                         <div class="product-des">
+                             <p><%=  item.Name %></p>
+                            <a class="btn btn-success" href="/ProductShow?id=<%= item.Id %>">Show</a>
+                             
+                              
+                         </div>
+                     </div>       
+
+                  <% } %>
+
+                 </div>
+            </div>
+
+             <div class="row">
+                  <h2>Beer</h2>
+                 <div class="grid-product">
+                     
+                  <% foreach (var item in beer)  { %>
+                    
+                     <div class="wrap-product">
+                         <img src="./food.jpg" alt="Alternate Text" width="170" height="170" />
+                         <div class="product-des">
+                             <p><%=  item.Name %></p>
+                            <a class="btn btn-success" href="/ProductShow?id=<%= item.Id %>">Show</a>
+                             
+                              
+                         </div>
+                     </div>       
+
+                  <% } %>
+
+                 </div>
+            </div>
+
+
+             
+
             
           </div>
 
 
-        <asp:LoginView id="LoginView1" runat="server">
-     <AnonymousTemplate>
-         Please log in for personalized information.
-          <a href="/Account/Login" >
-            <div class="btn btn-primary">Log In</div>
-          </a>
-     </AnonymousTemplate>
-     <LoggedInTemplate>
-
-         <asp:LoginName id="LoginName1" runat="Server"></asp:LoginName>.
-     </LoggedInTemplate>
-     <RoleGroups>
-         <asp:RoleGroup Roles="Admin">
-             <ContentTemplate>
-                 <asp:LoginName id="LoginName2" runat="Server" />, you are logged in as an administrator.
-             </ContentTemplate>
-         </asp:RoleGroup>
-     </RoleGroups>
- </asp:LoginView>
-    
+       
     
        
      

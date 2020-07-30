@@ -83,13 +83,16 @@
 
                  <h2>Add a New Product</h2>
 
-                  <form action="/ProductCreate" id="CreateProduct" >
+                  <form action="/ProductCreate" id="CreateProduct" method="POST">
                       <label for="Pname">Product name:</label><br>
                       <input type="text" name="Pname"><br>
                       <label for="Pdes">Product description:</label><br>
                       <textarea name="Pdes" form="CreateProduct"></textarea><br>
                       <label for="Pprice">Product price:</label><br>
                       <input type="text" name="Pprice"><br>
+                     
+                      Select image to upload:
+                      <input type="file" name="fileToUpload" id="fileToUpload">
                      
                       <label for="cat">Choose a Category:</label>
 
@@ -107,6 +110,8 @@
                             <option value="Pet">Pet</option>
                         </select>
                        <input type="submit" value="Submit">
+
+                      
                          <%--<asp:Button ID="Button1" runat="server" Text="Search a product"  OnClick="Button1_Click" />--%>
                     </form>
              </div>
@@ -242,7 +247,7 @@
             </div>
 
         
-        <div class="row">
+             <div class="row">
                   <h2>Pantry</h2>
                  <div class="grid-product">
                      

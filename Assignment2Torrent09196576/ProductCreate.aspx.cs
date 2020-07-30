@@ -1,7 +1,10 @@
 ﻿using Assignment2Torrent09196576.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -30,6 +33,10 @@ namespace Assignment2Torrent09196576
             var price = Request.Params["Pprice"];
             var discount = Request.Params["Pdiscount"];
             var category = Request.Params["Pcategory"];
+
+          
+
+         
 
             Product product = new Product();
             product.Name = name;

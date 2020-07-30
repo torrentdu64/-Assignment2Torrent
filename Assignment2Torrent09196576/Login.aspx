@@ -4,10 +4,10 @@
         <div class="row">
             <div class="col-xs-8">    
                 <h1>Login</h1>
-                
+                <asp:Label ID="Label1" runat="server"></asp:Label>
                   <div class="form-group">
                     <label for="exampleInputEmail1">email</label>
-
+                   
                      <%--<asp:TextBox ID="email" runat="server"></asp:TextBox>--%>
 
                     <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
