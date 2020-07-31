@@ -57,7 +57,7 @@ namespace Assignment2Torrent09196576
             _context.Products.Add(product);
             _context.SaveChanges();
 
-            Response.Redirect("/ProductAdminIndex.aspx");
+            Response.Redirect("/Admin/Product/ProductAdminIndex.aspx");
     
         }
     }

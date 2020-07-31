@@ -47,11 +47,11 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/ProductIndex">Countup</a>
+                    <a class="navbar-brand" runat="server" href="~/Product/ProductIndex">Countup</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/ProductIndex">Shop</a></li>
+                        <li><a runat="server" href="~/Product/ProductIndex">Shop</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                     </ul>
@@ -59,7 +59,7 @@
                     <ul class="nav navbar-nav navbar-right">
                        <li><%= email %></li>
                        <li><a href="/Login">Profile</a></li>
-                       <li><a class="btn btn-primary" href="/Logout">Logout</a></li>
+                       <li><a href="/Logout">Logout</a></li>
                     </ul>
                    <%-- <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>

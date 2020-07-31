@@ -70,7 +70,7 @@ namespace Assignment2Torrent09196576
 
                     if (adminOrCustomer.Role == "Admin")
                     {
-                        Response.Redirect("ProductAdminIndex.aspx");
+                        Response.Redirect("/Admin/Product/ProductAdminIndex.aspx");
                     }
 
 
@@ -97,10 +97,7 @@ namespace Assignment2Torrent09196576
                 
             }
            
-            //var query = _context.Products
-            //     .GroupBy(p => p.Category)
-            //     .Select(g => new { product = g.ToList() , count = g.Count()}).ToList();
-
+            
              query = _context.Products.ToList();
             SelectProduct(query);
 
@@ -244,8 +241,7 @@ namespace Assignment2Torrent09196576
 
            var  request = Request.Params["fname"];
 
-            //var test = LoginView1.Equals("TextBox1").ToString();
-            //var tete = Equals(TextBox1).ToString();
+          
 
             var result =
                         from Product in _context.Products
@@ -255,7 +251,7 @@ namespace Assignment2Torrent09196576
 
             resultList = result.ToList();
 
-            //Response.Redirect("/ProductIndex.aspx#search");
+          
 
         }
 
@@ -270,12 +266,6 @@ namespace Assignment2Torrent09196576
 
         }
 
-        //public  List<Product> Products()
-        //{
-        //    var dbProducts = _context.Products.ToList();
-
-        //    return dbProducts;
-        //}
-       
+      
     }
 }

@@ -50,7 +50,7 @@ namespace Assignment2Torrent09196576
             _context.SaveChanges();
 
 
-            Response.Redirect("ProductIndex.aspx");
+            Response.Redirect("/Product/ProductIndex.aspx");
             Response.End();
 
 

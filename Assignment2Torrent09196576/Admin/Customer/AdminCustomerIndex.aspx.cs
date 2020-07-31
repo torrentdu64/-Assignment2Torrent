@@ -43,7 +43,7 @@ namespace Assignment2Torrent09196576
             _context.SaveChanges();
 
             name = null;
-            Response.Redirect("AdminCustomerIndex.aspx");
+            Response.Redirect("/Admin/Customer/AdminCustomerIndex.aspx");
 
         }
     }

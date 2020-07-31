@@ -28,7 +28,7 @@ namespace Assignment2Torrent09196576
             _context.Customers.Attach(t);
             _context.Customers.Remove(t);
             _context.SaveChanges();
-            Response.Redirect("/AdminCustomerIndex.aspx");
+            Response.Redirect("/Admin/Customer/AdminCustomerIndex.aspx");
 
         }
     }

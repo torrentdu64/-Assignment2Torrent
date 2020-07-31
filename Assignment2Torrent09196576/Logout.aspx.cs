@@ -23,31 +23,20 @@ namespace Assignment2Torrent09196576
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            try
-            {
-                ////Assuming user comes back after several hours. several < 12.
-                ////Read the cookie from Request.
-                HttpCookie myCookie = Request.Cookies["Customer"];
-                if (myCookie == null)
-                {
-                    //No cookie found or cookie expired.
-                    //Can read product
-                    Response.Redirect("ProductIndex.aspx");
-                }
+        
+         
 
-                ////ok - cookie is found.
-                ////Gracefully check if the cookie has the key-value as expected.
 
-                myCookie.Expires = DateTime.Now.AddHours(-12);
+            
 
-                Response.Redirect("ProductIndex.aspx");
+            HttpCookie currentUserCookie = HttpContext.Current.Request.Cookies["Customer"];
+            HttpContext.Current.Response.Cookies.Remove("Customer");
+            currentUserCookie.Expires = DateTime.Now.AddDays(-12);
+            currentUserCookie.Value = null;
+            HttpContext.Current.Response.SetCookie(currentUserCookie);
+            Response.Redirect("/Product/ProductIndex.aspx");
 
-            }
-            catch (Exception err)
-            {
 
-                Response.Write(err);
-            }
         }
     }
 }

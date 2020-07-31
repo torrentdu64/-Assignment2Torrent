@@ -1,0 +1,268 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ProductIndex.aspx.cs" Inherits="Assignment2Torrent09196576.ProductIndex" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+
+
+    <div class="container">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group" id="search">
+                        <span class="input-group-btn"></span>
+                        <form action="/ProductIndex">
+
+                            <input type="text" id="QData" name="fname" class="form-control" placeholder="Search for...">
+
+
+                            <asp:LinkButton runat="server" ID="uxSearch" CssClass="btn btn-default" OnClick="Button1_Click">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                Search
+                            </asp:LinkButton>
+                        </form>
+
+                    </div>
+                    <!-- /input-group -->
+                    <a href="/Trolley/TrolleyShow.aspx" class="btn btn-primary" id="btn-position"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Checkout</a>
+                </div>
+                <!-- /.col-lg-6 -->
+
+            </div>
+        </div>
+
+        <% if (resultList != null)
+            { %>
+        <div class="row">
+            <div class="grid-product">
+                <% foreach (var item in resultList)
+                    { %>
+                <div class="wrap-product">
+                    <img src="../img/food.jpg" alt="Alternate Text" width="170" height="170" />
+                    <div class="product-des">
+                        <p><%=  item.Name %></p>
+                        <a class="btn btn-success" href="/Product/ProductShow?id=<%= item.Id %>">Show</a>
+                    </div>
+                </div>
+                <%  } %>
+            </div>
+        </div>
+        <% } %>
+    </div>
+
+
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center">Promotion</h1>
+
+            <div class="grid-promo">
+                <% foreach (var item in discounts)
+                    { %>
+
+                <div class="wrap-promo">
+                    <img src="../img/Promo.jpg" alt="Promo" />
+                    <a href="/Product/ProductShow?id=<%= item.Id %>">
+                        <h4><%=  item.Name %></h4>
+                    </a>
+                </div>
+
+                <%  } %>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    `<div class="container">
+
+
+        <h1 class="text-center">Products</h1>
+
+        <div class="row">
+           
+            <asp:Button ID="Button2" runat="server" Text="Order by Price" CssClass="btn btn-primary" OnClick="Button2_Click" />
+        </div>
+        <div class="row">
+            <h2>Meats</h2>
+            <div class="grid-product">
+
+                <% foreach (var item in meats)
+                    { %>
+
+                <div class="wrap-product">
+                    <img src="../img/food.jpg" alt="Alternate Text" width="170" height="170" />
+                    <div class="product-des">
+                        <p><%=  item.Name %></p>
+                        <a class="btn btn-success" href="/Product/ProductShow?id=<%= item.Id %>">Show</a>
+                    </div>
+                </div>
+
+                <% } %>
+            </div>
+        </div>
+        <div class="row">
+            <h2>Drinks</h2>
+            <div class="grid-product">
+
+                <% foreach (var item in drinks)
+                    { %>
+
+                <div class="wrap-product">
+                    <img src="../img/food.jpg" alt="Alternate Text" width="170" height="170" />
+                    <div class="product-des">
+                        <p><%=  item.Name %></p>
+                        <a class="btn btn-success" href="/Product/ProductShow?id=<%= item.Id %>">Show</a>
+
+
+                    </div>
+                </div>
+
+                <% } %>
+            </div>
+        </div>
+        <div class="row">
+            <h2>Fruits</h2>
+            <div class="grid-product">
+
+                <% foreach (var item in fruits)
+                    { %>
+
+                <div class="wrap-product">
+                    <img src="../img/food.jpg" alt="Alternate Text" width="170" height="170" />
+                    <div class="product-des">
+                        <p><%=  item.Name %></p>
+                        <a class="btn btn-success" href="/Product/ProductShow?id=<%= item.Id %>">Show</a>
+
+
+                    </div>
+                </div>
+
+                <% } %>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <h2>Fridge</h2>
+            <div class="grid-product">
+
+                <% foreach (var item in fridge)
+                    { %>
+
+                <div class="wrap-product">
+                    <img src="../img/food.jpg" alt="Alternate Text" width="170" height="170" />
+                    <div class="product-des">
+                        <p><%=  item.Name %></p>
+                        <a class="btn btn-success" href="/Product/ProductShow?id=<%= item.Id %>">Show</a>
+
+
+                    </div>
+                </div>
+
+                <% } %>
+            </div>
+        </div>
+
+        <div class="row">
+            <h2>Bakery</h2>
+            <div class="grid-product">
+
+                <% foreach (var item in bakery)
+                    { %>
+
+                <div class="wrap-product">
+                    <img src="../img/food.jpg" alt="Alternate Text" width="170" height="170" />
+                    <div class="product-des">
+                        <p><%=  item.Name %></p>
+                        <a class="btn btn-success" href="/Product/ProductShow?id=<%= item.Id %>">Show</a>
+
+
+                    </div>
+                </div>
+
+                <% } %>
+            </div>
+        </div>
+
+        <div class="row">
+            <h2>Frozen</h2>
+            <div class="grid-product">
+
+                <% foreach (var item in Frozen)
+                    { %>
+
+                <div class="wrap-product">
+                    <img src="../img/food.jpg" alt="Alternate Text" width="170" height="170" />
+                    <div class="product-des">
+                        <p><%=  item.Name %></p>
+                        <a class="btn btn-success" href="/Product/ProductShow?id=<%= item.Id %>">Show</a>
+
+
+                    </div>
+                </div>
+
+                <% } %>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <h2>Pantry</h2>
+            <div class="grid-product">
+
+                <% foreach (var item in pantry)
+                    { %>
+
+                <div class="wrap-product">
+                    <img src="../img/food.jpg" alt="Alternate Text" width="170" height="170" />
+                    <div class="product-des">
+                        <p><%=  item.Name %></p>
+                        <a class="btn btn-success" href="/Product/ProductShow?id=<%= item.Id %>">Show</a>
+
+
+                    </div>
+                </div>
+
+                <% } %>
+            </div>
+        </div>
+
+        <div class="row">
+            <h2>Beer</h2>
+            <div class="grid-product">
+
+                <% foreach (var item in beer)
+                    { %>
+
+                <div class="wrap-product">
+                    <img src="../img/food.jpg" alt="Alternate Text" width="170" height="170" />
+                    <div class="product-des">
+                        <p><%=  item.Name %></p>
+                        <a class="btn btn-success" href="/Product/ProductShow?id=<%= item.Id %>">Show</a>
+
+
+                    </div>
+                </div>
+
+                <% } %>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+</asp:Content>

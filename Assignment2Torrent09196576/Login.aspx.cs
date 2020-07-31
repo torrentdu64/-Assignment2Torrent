@@ -63,7 +63,7 @@ namespace Assignment2Torrent09196576
                 //Most important, write the cookie to client.
                 Response.Cookies.Add(customerCookie);
 
-                Response.Redirect("ProductIndex.aspx");
+                Response.Redirect("/Product/ProductIndex.aspx");
             }
             else
             {

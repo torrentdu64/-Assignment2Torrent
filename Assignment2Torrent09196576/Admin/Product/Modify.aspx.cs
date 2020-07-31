@@ -50,13 +50,21 @@ namespace Assignment2Torrent09196576
             p.Name = name;
             p.Description = description;
             p.Price = double.Parse(price);
-            p.Discount = discount;
+            if (discount == "")
+            {
+                p.Discount = null;
+            }
+            else
+            {
+                p.Discount = discount;
+            }
+            
             p.Category = category;
 
             _context.Products.AddOrUpdate(p);
             _context.SaveChanges();
 
-            Response.Redirect("/ProductAdminIndex.aspx");
+            Response.Redirect("/Admin/Product/ProductAdminIndex.aspx"); 
         }
     }
 }

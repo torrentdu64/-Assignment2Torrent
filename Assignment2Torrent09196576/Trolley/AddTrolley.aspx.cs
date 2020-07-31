@@ -7,14 +7,15 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
 namespace Assignment2Torrent09196576
 {
-    public partial class TrolleyShow : System.Web.UI.Page
+    public partial class AddTrolley : System.Web.UI.Page
     {
         private ApplicationDbContext _context;
         private Customer currentUser;
-        protected List<Trolley> trolleys;
-        public TrolleyShow()
+
+        public AddTrolley()
         {
             _context = new ApplicationDbContext();
         }
@@ -24,24 +25,13 @@ namespace Assignment2Torrent09196576
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            //var productId = int.Parse(Request.Params["id"]);
-            //var dbproduct = _context.Products.Single(m => m.Id == productId);
+            var productId = int.Parse(Request.Params["id"]);
+            var dbproduct = _context.Products.Single(m => m.Id == productId);
 
-            //var troll = new Trolley { Name = "Future Person" };
-            //troll.ProductTrolleys = new List<ProductTrolley>
-            //{
-            //  new ProductTrolley {
-            //    Product = dbproduct    
-            //  }
-            //};
 
-            ////Now add this Trolley, with all its relationships, to the database
-            //_context.Trolleys.Add(troll);
-            //_context.SaveChanges();
 
             //var userId = System.Web.HttpContext.Current.User.Identity.GetUserId();
             //var currentUser = _context.Users.Single(u => u.Id == userId);
-
             try
             {
                 HttpCookie myCookie = Request.Cookies["Customer"];
@@ -61,9 +51,9 @@ namespace Assignment2Torrent09196576
                     int userId = int.Parse(myCookie.Values["Customer_id"].ToString());
                     //Yes userId is found. Mission accomplished
 
-                    currentUser = _context.Customers.SingleOrDefault(m => m.Id == userId);
+                     currentUser = _context.Customers.SingleOrDefault(m => m.Id == userId);
 
-
+                  
 
 
                 }
@@ -74,17 +64,22 @@ namespace Assignment2Torrent09196576
                 throw;
             }
 
-            trolleys = _context.Trolleys.Where(t => t.Customer.Id == currentUser.Id).ToList();
+
+            var troll = new Trolley { Customer = currentUser };
+            troll.ProductTrolleys = new List<ProductTrolley>
+            {
+              new ProductTrolley {
+                Product = dbproduct
+              }
+            };
+
+            //Now add this Trolley, with all its relationships, to the database
+            _context.Trolleys.Add(troll);
+            _context.SaveChanges();
+
             
 
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            var look = Request.Params;
-            Button btn = (Button)sender;
-            btn.CommandArgument.ToString();
-
+            Response.Redirect("/Product/ProductIndex.aspx?status=Add To Cart");
         }
     }
 }
