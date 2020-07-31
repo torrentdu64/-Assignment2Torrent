@@ -34,7 +34,7 @@ namespace Assignment2Torrent09196576
             currentUserCookie.Expires = DateTime.Now.AddDays(-12);
             currentUserCookie.Value = null;
             HttpContext.Current.Response.SetCookie(currentUserCookie);
-            Response.Redirect("/Product/ProductIndex.aspx");
+            Response.Redirect("/Product/3ProductIndex.aspx");
 
 
         }

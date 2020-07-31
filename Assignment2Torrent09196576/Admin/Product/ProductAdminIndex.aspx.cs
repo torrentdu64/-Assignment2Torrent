@@ -214,13 +214,12 @@ namespace Assignment2Torrent09196576
             
         }
 
-        protected void Button1_Click1(object sender, EventArgs e)
+        protected void Button1_Click2(object sender, EventArgs e)
         {
             var queryName = Request.Params["fname"];
 
             var catQuery = Request.Params["Pcategory"];
 
-            //IQueryable<Product> resultName = null;
             if (queryName != "" )
             {
                var  resultName =

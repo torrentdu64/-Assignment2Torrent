@@ -3,25 +3,35 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="container">
+         <div class="jumbotron">
         <div class="row">
-            <form action="/Admin/Product/ProductAdminIndex">
-                <input type="text" id="QData" name="fname"><br>
-                <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click1" />
-                <select name="Pcategory" id="cat">
-                    <option value="null">No Category Search</option>
-                    <option value="Fruit & Veg">Fruit & Veg</option>
-                    <option value="Meat & Seafood">Meat & Seafood</option>
-                    <option value="Fridge & Deli">Fridge & Deli</option>
-                    <option value="Bakery">Bakery</option>
-                    <option value="Frozen">Frozen</option>
-                    <option value="Pantry">Pantry</option>
-                    <option value="Beer & Wine">Beer & Wine</option>
-                    <option value="Drinks">Drinks</option>
-                    <option value="Health & Beauty">Health & Beauty</option>
-                    <option value="Baby & Child">Baby & Child</option>
-                    <option value="Pet">Pet</option>
-                </select><br>
-            </form>
+            <div class="input-group" id="search">
+                <span class="input-group-btn"></span>
+                <form action="/Admin/Product/ProductAdminIndex">
+                    <input type="text" id="QData" name="fname" class="form-control" placeholder="Search for..."><br>
+
+                   
+                    <asp:LinkButton runat="server" ID="Button2" CssClass="btn btn-default" OnClick="Button1_Click2">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                Search
+                            </asp:LinkButton>
+
+                    <select name="Pcategory" id="cat">
+                        <option value="null">No Category Search</option>
+                        <option value="Fruit & Veg">Fruit & Veg</option>
+                        <option value="Meat & Seafood">Meat & Seafood</option>
+                        <option value="Fridge & Deli">Fridge & Deli</option>
+                        <option value="Bakery">Bakery</option>
+                        <option value="Frozen">Frozen</option>
+                        <option value="Pantry">Pantry</option>
+                        <option value="Beer & Wine">Beer & Wine</option>
+                        <option value="Drinks">Drinks</option>
+                        <option value="Health & Beauty">Health & Beauty</option>
+                        <option value="Baby & Child">Baby & Child</option>
+                        <option value="Pet">Pet</option>
+                    </select><br>
+                </form>
+            </div>
         </div>
         <% if (resultList != null)
             { %>
@@ -34,6 +44,7 @@
             </ul>
         </div>
         <% } %>
+        </div>
     </div>
 
     <div class="container">

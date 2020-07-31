@@ -187,7 +187,6 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="CreateCustomer.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Admin\Customer\DeleteCustomer.aspx" />
     <Content Include="Admin\Customer\EditCustomer.aspx" />
@@ -219,12 +218,8 @@
     </Content>
     <Content Include="Admin\Product\ProductCreate.aspx" />
     <Content Include="Admin\Product\ProductDestroy.aspx" />
-    <Content Include="ProductEdit.aspx" />
-    <Content Include="ProductEdit2.aspx" />
     <Content Include="Product\ProductIndex.aspx" />
-    <Content Include="ProductOrder.aspx" />
     <Content Include="Product\ProductShow.aspx" />
-    <Content Include="ProductUpdate.aspx" />
     <Content Include="img\Promo.jpg" />
     <Content Include="Register.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -259,8 +254,6 @@
     <Content Include="Styles.css" />
     <Content Include="Trolley\TrolleyDestroy.aspx" />
     <Content Include="Trolley\TrolleyShow.aspx" />
-    <Content Include="UserAdminCreate.aspx" />
-    <Content Include="UserAdminIndex.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -405,13 +398,6 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CreateCustomer.aspx.cs">
-      <DependentUpon>CreateCustomer.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CreateCustomer.aspx.designer.cs">
-      <DependentUpon>CreateCustomer.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -531,34 +517,12 @@
     <Compile Include="Admin\Product\ProductDestroy.aspx.designer.cs">
       <DependentUpon>ProductDestroy.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ProductEdit.aspx.cs">
-      <DependentUpon>ProductEdit.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ProductEdit2.aspx.cs">
-      <DependentUpon>ProductEdit2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ProductEdit2.aspx.designer.cs">
-      <DependentUpon>ProductEdit2.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Product\ProductIndex.aspx.cs">
       <DependentUpon>ProductIndex.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ProductOrder.aspx.cs">
-      <DependentUpon>ProductOrder.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ProductOrder.aspx.designer.cs">
-      <DependentUpon>ProductOrder.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Product\ProductShow.aspx.cs">
       <DependentUpon>ProductShow.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ProductUpdate.aspx.cs">
-      <DependentUpon>ProductUpdate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -598,20 +562,6 @@
     <Compile Include="Trolley\TrolleyShow.aspx.designer.cs">
       <DependentUpon>TrolleyShow.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UserAdminCreate.aspx.cs">
-      <DependentUpon>UserAdminCreate.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UserAdminCreate.aspx.designer.cs">
-      <DependentUpon>UserAdminCreate.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="UserAdminIndex.aspx.cs">
-      <DependentUpon>UserAdminIndex.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UserAdminIndex.aspx.designer.cs">
-      <DependentUpon>UserAdminIndex.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -622,7 +572,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Customer\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
