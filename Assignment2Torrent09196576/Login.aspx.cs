@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -34,12 +36,20 @@ namespace Assignment2Torrent09196576
 
             var email = Request.Params["email"];
             var password = Request.Params["password"];
-
+            var pass = decrypt(password);
             Customer customer = new Customer();
+            try
+            {
+                customer = _context.Customers.SingleOrDefault(m => m.Name == email);
+            }
+            catch (Exception d)
+            {
 
-            customer = _context.Customers.SingleOrDefault(m => m.Name == email);
+                Label1.Text = "Somethink is wrong " + d;
+            }
+            
 
-            if(customer != null)
+            if(customer.Name != null)
             {
                 HttpCookie customerCookie = new HttpCookie("Customer");
 
@@ -62,6 +72,19 @@ namespace Assignment2Torrent09196576
             //create a cookie
             
         }
+
+      
+
+        public static string decrypt(string password)
+        {
+
+            SHA256CryptoServiceProvider sha256 = new SHA256CryptoServiceProvider();
+
+            byte[] keyBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password + "SALT"));
+            string val = Convert.ToBase64String(keyBytes);
+            return val;
+        }
+
 
         protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
         {

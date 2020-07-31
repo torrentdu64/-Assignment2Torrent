@@ -28,13 +28,14 @@ namespace Assignment2Torrent09196576
         
         protected void Page_Load(object sender, EventArgs e)
         {
+
             var name = Request.Params["Pname"];
             var description = Request.Params["Pdes"];
             var price = Request.Params["Pprice"];
             var discount = Request.Params["Pdiscount"];
             var category = Request.Params["Pcategory"];
 
-          
+           
 
          
 

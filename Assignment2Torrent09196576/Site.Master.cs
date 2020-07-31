@@ -18,17 +18,7 @@ namespace Assignment2Torrent09196576
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
         private string _antiXsrfTokenValue;
         protected string email;
-        private ApplicationDbContext _context;
-
-
-        public SiteMaster()
-        {
-            _context = new ApplicationDbContext();
-        }
-        public override void Dispose()
-        {
-            base.Dispose();
-        }
+        
 
         protected void Page_Init(object sender, EventArgs e)
         {

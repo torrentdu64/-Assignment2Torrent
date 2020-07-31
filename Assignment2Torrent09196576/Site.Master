@@ -59,6 +59,7 @@
                     <ul class="nav navbar-nav navbar-right">
                        <li><%= email %></li>
                        <li><a href="/Login">Profile</a></li>
+                       <li><a class="btn btn-primary" href="/Logout">Logout</a></li>
                     </ul>
                    <%-- <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
